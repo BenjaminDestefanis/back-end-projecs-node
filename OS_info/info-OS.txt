@@ -1,1 +1,6 @@
-win32
+Plataforma : win32 
+Typo : Windows_NT 
+Arquitectura : x64 
+Version : 10.0.19045 
+Tiempo Encendido : 09:15:12 
+RAM : 6367891456 
