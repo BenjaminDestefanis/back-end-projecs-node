@@ -14,15 +14,29 @@ const timeConverter = (seconds) => {
     return `${hour}:${minute}:${second}`
 }
 
+const conversMemory = (memory) => {
+    let memoryInKb = memory / 1024
+    let memoryInMb = memoryInKb / 1024
+    let memoryInGb = memoryInMb / 1024
+
+    memoryInKb = Math.floor(memoryInKb)
+    memoryInMb = Math.floor(memoryInMb)
+    memoryInGb = Math.floor(memoryInGb)
+
+    let respond = `${memoryInGb} GB - ${memoryInMb} MB`
+    return respond
+}
+
+
 const platform = os.platform()
 const type = os.type()
 const arch = os.arch()
 const release = os.release()
 const upTime = timeConverter(os.uptime())
-const totalMem = os.totalmem()
-const freeMem = os.freemem()
+const totalMem = conversMemory(os.totalmem())
+const freeMem = conversMemory(os.freemem())
 
-const osInfo = `Plataforma : ${platform} \nTypo : ${type} \nArquitectura : ${arch} \nVersion : ${release} \nTiempo Encendido : ${upTime} \nRAM : ${totalMem} \nRAM libre : ${freeMem}}`
+const osInfo = `Plataforma : ${platform} \nTypo : ${type} \nArquitectura : ${arch} \nVersion : ${release} \nTiempo Encendido : ${upTime} \nRAM : ${totalMem} \nRAM libre : ${freeMem}`
 
 
 const createDocument = (document, infoDocument) => {

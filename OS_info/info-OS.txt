@@ -2,5 +2,6 @@ Plataforma : win32
 Typo : Windows_NT 
 Arquitectura : x64 
 Version : 10.0.19045 
-Tiempo Encendido : 09:15:12 
-RAM : 6367891456 
+Tiempo Encendido : 09:48:54 
+RAM : 5 GB - 6072 MB 
+RAM libre : 0 GB - 988 MB
