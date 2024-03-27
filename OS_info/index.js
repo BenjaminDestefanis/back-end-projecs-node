@@ -9,6 +9,8 @@ let release = os.release()
 let upTime = os.uptime()
 let totalMem = os.totalmem()
 let freeMem = os.freemem()
+let cpus = os.cpus()
+
 
 
 
@@ -24,6 +26,8 @@ const timeConverter = (seconds) => {
 
     return `${hour}:${minute}:${second}`
 }
+
+// Memory Coversor
 
 const conversMemory = (memory) => {
     let memoryInKb = memory / 1024
@@ -43,11 +47,25 @@ totalMem = conversMemory(totalMem)
 freeMem = conversMemory(freeMem)
 
 
+// Cores
+
+let numCores = 0
+let modelCore
+
+for(let i = 0; i < cpus.length; i++){
+    numCores++
+    if(!modelCore){
+        modelCore = cpus[i].model
+    }
+}
+
+numCores = numCores.toString()
 
 
 
 
-const osInfo = `Plataforma : ${platform} \nTypo : ${type} \nArquitectura : ${arch} \nVersion : ${release} \nTiempo Encendido : ${upTime} \nRAM : ${totalMem} \nRAM libre : ${freeMem}`
+
+const osInfo = `Plataforma : ${platform} \nTypo : ${type} \nArquitectura : ${arch} \nVersion : ${release} \nTiempo Encendido : ${upTime} \nRAM : ${totalMem} \nRAM libre : ${freeMem} \nNumbers of Cores : ${numCores} \nCPU Model : ${modelCore}`
 
 
 const createDocument = (document, infoDocument) => {
