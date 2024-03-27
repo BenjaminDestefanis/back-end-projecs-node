@@ -1,9 +1,15 @@
 Plataforma : win32 
 Typo : Windows_NT 
-Arquitectura : x64 
+Arquitectura : x64 - x86_64 
 Version : 10.0.19045 
-Tiempo Encendido : 27:13:15 
+Tiempo Encendido : 31:38:13 
 RAM : 5 GB - 6072 MB 
-RAM libre : 1 GB - 1226 MB 
+RAM libre : 1 GB - 1213 MB 
 Numbers of Cores : 4 
-CPU Model : AMD Athlon 3000G with Radeon Vega Graphics     
+CPU Model : AMD Athlon 3000G with Radeon Vega Graphics      
+Hostname : DESKTOP-M884JJ8 
+OS Version : Windows 10 Pro 
+Username : jc 
+Address : 192.168.1.136 
+MAC : a8:a1:59:58:6e:a4 
+IP : 192.168.1.136/24

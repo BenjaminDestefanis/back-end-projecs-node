@@ -10,7 +10,17 @@ let upTime = os.uptime()
 let totalMem = os.totalmem()
 let freeMem = os.freemem()
 let cpus = os.cpus()
+let hostName = os.hostname()
+let machine = os.machine()
+let versionOs = os.version()
+let infoUser = os.userInfo()
+let ethernetInfo = os.networkInterfaces().Ethernet
+let address = ethernetInfo[1].address
+let mac = ethernetInfo[1].mac
+let IP = ethernetInfo[1].cidr
 
+//console.log(os.networkInterfaces())
+//console.log(os.networkInterfaces().Ethernet)
 
 
 
@@ -47,10 +57,11 @@ totalMem = conversMemory(totalMem)
 freeMem = conversMemory(freeMem)
 
 
-// Cores
+// Cores and username
 
 let numCores = 0
 let modelCore
+infoUser = infoUser.username
 
 for(let i = 0; i < cpus.length; i++){
     numCores++
@@ -61,13 +72,9 @@ for(let i = 0; i < cpus.length; i++){
 
 numCores = numCores.toString()
 
+const osInfo = `Plataforma : ${platform} \nTypo : ${type} \nArquitectura : ${arch} - ${machine} \nVersion : ${release} \nTiempo Encendido : ${upTime} \nRAM : ${totalMem} \nRAM libre : ${freeMem} \nNumbers of Cores : ${numCores} \nCPU Model : ${modelCore} \nHostname : ${hostName} \nOS Version : ${versionOs} \nUsername : ${infoUser} \nAddress : ${address} \nMAC : ${mac} \nIP : ${IP}`
 
-
-
-
-const osInfo = `Plataforma : ${platform} \nTypo : ${type} \nArquitectura : ${arch} \nVersion : ${release} \nTiempo Encendido : ${upTime} \nRAM : ${totalMem} \nRAM libre : ${freeMem} \nNumbers of Cores : ${numCores} \nCPU Model : ${modelCore}`
-
-
+//console.log(osInfo)
 const createDocument = (document, infoDocument) => {
     fs.writeFile(document, infoDocument, (err) => {
         if (err){
@@ -78,6 +85,5 @@ const createDocument = (document, infoDocument) => {
         }
     })
 }
-
 
 createDocument('info-OS.txt', osInfo)
