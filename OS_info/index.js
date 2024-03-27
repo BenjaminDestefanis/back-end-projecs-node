@@ -1,6 +1,7 @@
 const os = require("os")
 const fs = require("fs")
 
+//Info extract of node
 
 let platform = os.platform()
 let type = os.type()
@@ -18,11 +19,6 @@ let ethernetInfo = os.networkInterfaces().Ethernet
 let address = ethernetInfo[1].address
 let mac = ethernetInfo[1].mac
 let IP = ethernetInfo[1].cidr
-
-//console.log(os.networkInterfaces())
-//console.log(os.networkInterfaces().Ethernet)
-
-
 
 // Seconds to Minutes to Houers
 
@@ -56,7 +52,6 @@ upTime = timeConverter(upTime)
 totalMem = conversMemory(totalMem)
 freeMem = conversMemory(freeMem)
 
-
 // Cores and username
 
 let numCores = 0
@@ -74,7 +69,6 @@ numCores = numCores.toString()
 
 const osInfo = `Plataforma : ${platform} \nTypo : ${type} \nArquitectura : ${arch} - ${machine} \nVersion : ${release} \nTiempo Encendido : ${upTime} \nRAM : ${totalMem} \nRAM libre : ${freeMem} \nNumbers of Cores : ${numCores} \nCPU Model : ${modelCore} \nHostname : ${hostName} \nOS Version : ${versionOs} \nUsername : ${infoUser} \nAddress : ${address} \nMAC : ${mac} \nIP : ${IP}`
 
-//console.log(osInfo)
 const createDocument = (document, infoDocument) => {
     fs.writeFile(document, infoDocument, (err) => {
         if (err){
