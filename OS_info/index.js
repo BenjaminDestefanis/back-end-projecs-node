@@ -1,6 +1,17 @@
 const os = require("os")
 const fs = require("fs")
 
+
+let platform = os.platform()
+let type = os.type()
+let arch = os.arch()
+let release = os.release()
+let upTime = os.uptime()
+let totalMem = os.totalmem()
+let freeMem = os.freemem()
+
+
+
 // Seconds to Minutes to Houers
 
 const timeConverter = (seconds) => {
@@ -27,14 +38,14 @@ const conversMemory = (memory) => {
     return respond
 }
 
+upTime = timeConverter(upTime)
+totalMem = conversMemory(totalMem)
+freeMem = conversMemory(freeMem)
 
-const platform = os.platform()
-const type = os.type()
-const arch = os.arch()
-const release = os.release()
-const upTime = timeConverter(os.uptime())
-const totalMem = conversMemory(os.totalmem())
-const freeMem = conversMemory(os.freemem())
+
+
+
+
 
 const osInfo = `Plataforma : ${platform} \nTypo : ${type} \nArquitectura : ${arch} \nVersion : ${release} \nTiempo Encendido : ${upTime} \nRAM : ${totalMem} \nRAM libre : ${freeMem}`
 
