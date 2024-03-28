@@ -1,5 +1,28 @@
 {
   "dependencies": {
-    "colors": "^1.4.0"
-  }
+    "colors": "^1.4.0",
+    "dotenv": "^16.4.5",
+    "express": "^4.19.2",
+    "mongoose": "^8.2.3",
+    "nodemon": "^3.1.0"
+  },
+  "name": "back-end-projecs-node",
+  "version": "1.0.0",
+  "description": "Diferents projets buildign with node.js and diferentes dependencies",
+  "main": "index.js",
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev" : "nodemon ./API-Task-List/index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/BenjaminDestefanis/back-end-projecs-node.git"
+  },
+  "author": "Benjamin Destefanis",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/BenjaminDestefanis/back-end-projecs-node/issues"
+  },
+  "homepage": "https://github.com/BenjaminDestefanis/back-end-projecs-node#readme"
 }
