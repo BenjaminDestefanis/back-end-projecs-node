@@ -22,5 +22,4 @@ mongoConnect()
 
 const db = mongoose.connection;
 
-
 module.exports = db;
