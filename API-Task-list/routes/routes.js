@@ -16,18 +16,14 @@ router.get('/tasks', async (req, res) => {
 })
 
 router.post('/createtask', async  (req, res) => {
+    const {task_name, description, complete, date } = req.body
+    console.log(task_name, description, complete, date) 
     
-    console.log(req.body.task_name) 
    //res.send("HELLO POST")
     /* const task = new Task(req.body)
     await task.save()
     res.json(task) */
 })
-
-router.delete('/del', (req, res) => {
-    res.send("Hello DELETE")
-})
-
 
 
 module.exports = router
