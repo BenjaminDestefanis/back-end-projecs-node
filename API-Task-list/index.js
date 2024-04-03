@@ -3,21 +3,19 @@ const express = require('express')
 const db = require('./db-connect')
 const colors = require('colors')
 const app = express()
-const routes = require('./routes/routes')
-
+const tasksRoutes = require('./routes/routes')
 const TaskModel = require("./models/models")
 
 
-app.use('/', routes)
 app.use(express.json())
 app.use(express.urlencoded({ extended : true}))
+
+// routes
+app.use(tasksRoutes)
 
 app.get('/', (req, res) => {
     res.sendFile(__dirname + "/public/index.html")
 })
-
-
-
 
 
 const PORT = 3000

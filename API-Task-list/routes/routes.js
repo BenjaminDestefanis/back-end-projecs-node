@@ -3,22 +3,31 @@ const app = express()
 const Task = require('../models/models')
 const router = express.Router()
 const mongoose = require("mongoose")
+ 
 
-//app.use(express.json())
-app.use(express.urlencoded({ extended : true}))
+
+
+
 
 router.get('/tasks', async (req, res) => {
     const tasks = await Task.find()
-    res.json(tasks)
+    res.json(tasks) 
+
 })
 
-router.post('/createTask',  (req, res) => {
-    //const taskName = req.body.task_name
-    console.log(req.body.description)
+router.post('/createtask', async  (req, res) => {
+    
+    console.log(req.body.task_name) 
+   //res.send("HELLO POST")
     /* const task = new Task(req.body)
     await task.save()
     res.json(task) */
 })
+
+router.delete('/del', (req, res) => {
+    res.send("Hello DELETE")
+})
+
 
 
 module.exports = router
