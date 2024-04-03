@@ -3,7 +3,7 @@ const { DB_USER, DB_PASSWORD } = process.env;
 const mongoose = require('mongoose');
 const colors = require('colors')
 
-const dbUri = `mongodb+srv://benjaminisraelb:CRsCSxmG1A36k1jH@tasklistdb.omwu7qi.mongodb.net/`;
+const dbUri = `mongodb+srv://${DB_USER}:${DB_PASSWORD}@tasklistdb.omwu7qi.mongodb.net/`;
 
 const mongoConnect = async () => {
     try{
