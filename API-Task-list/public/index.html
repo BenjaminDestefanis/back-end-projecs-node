@@ -11,6 +11,9 @@
 
     <h2>Create Task</h2>
 
+
+    <!-- Create task form -->
+
     <div>
         <form action="/createtask" method="POST">
             <label for="task_name">Task Name:</label>
@@ -27,6 +30,18 @@
             <input type="date" id="date" name="date">
     
             <input type="submit" value="createTask/"></input>
+        </form>
+    </div>
+
+
+    <!-- Delete Form -->
+
+    <div>
+        <form action="">
+            <label for="delete_id_name">Id task to delete</label>
+            <input type="text" id="delete_id_name" name="delete_id_name">
+
+            <input type="submit" value="deleteTask/">
         </form>
     </div>
     

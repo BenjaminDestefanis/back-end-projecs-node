@@ -6,6 +6,7 @@ const colors = require('colors')
 //console.log(DB_PASSWORD, DB_USER)
 
 const dbUri = `mongodb+srv://${DB_USER}:${DB_PASSWORD}@tasklistdb.omwu7qi.mongodb.net/`;
+//const dbUri = `mongodb+srv://benjaminisraelb:CRsCSxmG1A36k1jH@tasklistdb.omwu7qi.mongodb.net/`;
 
 const mongoConnect = async () => {
     try{

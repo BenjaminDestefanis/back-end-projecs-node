@@ -4,7 +4,7 @@ const taskSchema = new mongoose.Schema({
     taskName: String,
     Description: String,
     Complete: Boolean,
-    Date: Date,
+    Date: String,
     Time: String
 })
 
