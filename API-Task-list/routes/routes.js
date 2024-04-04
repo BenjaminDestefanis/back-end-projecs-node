@@ -18,12 +18,6 @@ router.get('/getTask')
 router.post('/createtask', async  (req, res) => {
     const {task_name, description, complete, date } = req.body
 
-    
-
-    
-    /* console.log(task_name, description, complete, date) 
-    res.json(task) */
-
     const newTask = new Task({
         taskName : task_name,
         Description: description,
@@ -38,9 +32,13 @@ router.post('/createtask', async  (req, res) => {
     } catch (error) {
         console.log('An Error has ocurred :'.red + error)
     }
-    
-    await newTask.save()
     res.json(newTask) 
+})
+
+router.delete('/deleteTask/:id', (req, res) => {
+    const id = req.params
+    console.log('DELETE')
+    res.send("TASK DELETE")
 })
 
 
