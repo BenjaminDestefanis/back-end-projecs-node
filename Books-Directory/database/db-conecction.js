@@ -7,10 +7,10 @@ const connectPSQL = async () => {
 
     await sequelize.authenticate()
             .then(() => {
-                console.log("Conexion exitosa")
+                console.log("Conexion exitosa".green)
             })
             .catch((error) => {
-                console.log('Error', error)
+                console.log(`Error: ${error}`.red)
             })
 }
 
