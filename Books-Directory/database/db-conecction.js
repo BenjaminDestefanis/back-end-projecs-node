@@ -15,5 +15,5 @@ const connectPSQL = async () => {
 }
 
 module.exports = {
-    connectPSQL
+    connectPSQL,
 }
